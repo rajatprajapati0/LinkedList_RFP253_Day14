@@ -19,6 +19,28 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
+        public T Pop()
+        {
+            if (head == null)
+            {
+                throw new NullReferenceException("List is Empty");
+            }
+            Node temp = head;
+
+              Node pop = head;
+            while (temp.next != null)
+            {
+                pop = temp;
+                temp = temp.next;
+            }
+            T obj = temp.data;
+            if (head.next == null)
+            {
+                head = null;
+            }
+            pop.next = null;
+            return obj;
+        }
 
         public bool Insert(int ind, T data)
         {
