@@ -19,6 +19,24 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
+        public bool Append(T data)
+        {
+          Node node=new Node(data);
+            if (head==null)
+            {
+                head = node;
+                return true;
+            }
+            Node temp=head;
+            while(temp.next!=null)
+            {
+              temp=temp.next;
+
+            }
+            temp.next=node;
+            return true;
+        
+        }
       
         public bool Add(T data)
         {
