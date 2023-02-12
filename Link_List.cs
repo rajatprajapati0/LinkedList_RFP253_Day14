@@ -36,8 +36,23 @@ namespace LinkedList_Work
             return true;
 
         }
-     
-       
+
+        public override string ToString()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            Node temp = head;
+            string s = "";
+            while (temp != null)
+            {
+                s = s + temp.data + " ";
+                temp = temp.next;
+            }
+            return s;
+        }
+
 
     }
 }

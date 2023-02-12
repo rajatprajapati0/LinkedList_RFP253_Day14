@@ -6,4 +6,4 @@ Link_List<int>list= new Link_List<int>();
 list.Add(56);
 list.Add(30);
 list.Add(70);
-Console.WriteLine("done");
+Console.WriteLine(list.ToString());
