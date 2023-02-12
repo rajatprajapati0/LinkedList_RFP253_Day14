@@ -19,6 +19,20 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
+
+        public bool Search(T data)
+        {
+            if (head == null)
+                throw new NullReferenceException("empty List");
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data.Equals(data))
+                    return true;
+                temp = temp.next;
+            }
+            return false;
+        }
         public T Pop()
         {
             if (head == null)
@@ -41,6 +55,7 @@ namespace LinkedList_Work
             pop.next = null;
             return obj;
         }
+        
 
         public bool Insert(int ind, T data)
         {

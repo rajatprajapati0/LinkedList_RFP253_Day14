@@ -7,10 +7,13 @@ list.Add(56);
 list.Add(30);
 list.Add(70);
 Console.WriteLine(list.ToString());
-//output will 70 30 56
 
-//but after calling Pop method it will remove first   value
-list.Pop();
-Console.WriteLine(list.ToString());
-//output will be 70 30
+//it helps to find the input value presnt in list or not
+Console.WriteLine(list.Search(30));
+//out puttrue
+Console.WriteLine(list.Search(60));
+//output false
+
+
+
 
