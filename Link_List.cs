@@ -24,7 +24,7 @@ namespace LinkedList_Work
         {
             Node node= new Node(data);
             
-            if (head != null)
+            if (head == null)
             {
                 head = node;
                 return true;
@@ -36,6 +36,7 @@ namespace LinkedList_Work
             return true;
 
         }
+     
        
 
     }

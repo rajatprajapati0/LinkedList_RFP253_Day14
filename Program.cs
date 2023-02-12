@@ -1,26 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// See https://aka.ms/new-console-template for more information
+using LinkedList_Work;
 
-namespace LinkedList_Work
-{
-  public class Program
-  {
-    public static void Main(string[] args) 
-    {
-        Console.WriteLine("Data Structure\r\nProblems using\r\nC# Generics");
-       
-        
-        Link_List<int>list = new Link_List<int>();
-            list.Add(1);
-            list.Add(2);    
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
-            Console.WriteLine("done");
-         
-           
-    }
-        
-
-  }
-}
+Console.WriteLine("Hello, World!");
+Link_List<int>list= new Link_List<int>();
+list.Add(56);
+list.Add(30);
+list.Add(70);
+Console.WriteLine("done");
