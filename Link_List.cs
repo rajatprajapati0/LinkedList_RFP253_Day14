@@ -19,6 +19,32 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
+
+        public bool Insert(int ind, T data)
+        {
+            Node node = new Node(data);
+            if (ind == 0)
+            {
+                node.next = head;
+                head = node ;
+                return true;
+            }
+            Node temp = head;
+            Node pre = null;
+            while (ind > 0 && temp != null) 
+            {
+                ind--;
+                pre = temp;
+                temp = temp.next;
+            }
+            if (ind == 0)
+            {
+                pre.next = node;
+                node.next = temp;
+                return true;
+            }
+            throw new NullReferenceException("index is not in range");
+        }
         public bool Append(T data)
         {
           Node node=new Node(data);
