@@ -19,6 +19,32 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
+        public bool Remove(T input)
+        {
+            if (head == null)
+             
+                return false;
+            if (head.next == null)
+                head = null;
+            Node temp = head;
+            Node pr = null;
+            while (temp!= null)
+            {
+                if (temp.data.Equals(input))
+                {
+                    if (pr == null)
+                    {
+                        head = temp.next;
+                        return true;
+                    }
+                    pr.next = temp.next;
+                    return true;
+                }
+              pr = temp;
+               temp = temp.next;
+            }
+            return false;
+        }
 
         public bool Search(T data)
         {
