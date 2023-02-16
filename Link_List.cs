@@ -19,31 +19,24 @@ namespace LinkedList_Work
                 this.data = data;
             }
         }
-        public bool Remove(T input)
+     
+        public bool insertAfter(T value, T data)
         {
             if (head == null)
-             
-                return false;
-            if (head.next == null)
-                head = null;
+                throw new NullReferenceException("empty List");
+            Node node = new Node(value);
             Node temp = head;
-            Node pr = null;
-            while (temp!= null)
+            while (temp != null)
             {
-                if (temp.data.Equals(input))
+                if (temp.data.Equals(data))
                 {
-                    if (pr == null)
-                    {
-                        head = temp.next;
-                        return true;
-                    }
-                    pr.next = temp.next;
+                    node.next = node.next;
+                    temp.next = node;
                     return true;
                 }
-              pr = temp;
-               temp = temp.next;
+                temp = temp.next;
             }
-            return false;
+            throw new NullReferenceException("Given data not present");
         }
 
         public bool Search(T data)

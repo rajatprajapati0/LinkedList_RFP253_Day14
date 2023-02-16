@@ -5,9 +5,8 @@ Console.WriteLine("Hello, World!");
 Link_List<int>list= new Link_List<int>();
 list.Add(56);
 list.Add(30);
-list.Add(40);
 list.Add(70);
-list.Remove(40);
+//list.insertAfter(40,30);
 
 Console.WriteLine(list.ToString());
 
